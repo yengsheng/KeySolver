@@ -9,7 +9,7 @@ def left_circular_shift(num, bits):
     shift_mask = 2 ** num.bit_length()-1
     return ((num << bits) & shift_mask) | (num >> (num.bit_length()-bits)) 
 
-def key_finder(plaintexts, ciphertexts):
+def key_finder(plaintexts, ciphertext):
     pass
     
 
