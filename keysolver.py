@@ -88,8 +88,8 @@ def key_finder(plaintexts, ciphertexts):
     k3 = '0' * (4 - len(k3)) + k3
     return k1 + k2 + k3
 
-plaintext = 0b00000000000000000000000000000000
-key_schedule = [0x1914, 0x1110, 0xa908]
+plaintext = 0b00000000000000000000000000000000 # Initial plaintext which gives the 32 new pairs with plaintexts switched by one bit.
+key_schedule = [0x1914, 0x1110, 0xa908]        # Key schedule used to encrypt the 33 plaintexts
 plains, ciphers = Simon_3.generator(plaintext, key_schedule)
 ans = key_finder(plains, ciphers)
 print(ans)
